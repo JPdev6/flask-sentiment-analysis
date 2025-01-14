@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sentiment Analysis Tool</title>
+
+    <!-- Link Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <!-- Link Custom CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body class="d-flex flex-column min-vh-100">
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-primary">
+        <div class="container">
+            <a class="navbar-brand" href="#">Sentiment Analysis</a>
+        </div>
+    </nav>
+
+    <!-- Main Content -->
+    <div class="container mt-5 flex-grow-1">
+        <div class="card shadow-lg">
+            <div class="card-header bg-primary text-white text-center">
+                <h1 class="h3">Sentiment Analysis Tool</h1>
+                <p class="mb-0">Analyze the sentiment of your text instantly</p>
+            </div>
+            <div class="card-body">
+                <form id="analysisForm" action="/analyze" method="post" class="needs-validation" novalidate>
+                    <div class="mb-3">
+                        <label for="text" class="form-label">Enter Text to Analyze</label>
+                        <textarea name="text" id="text" rows="4" class="form-control" placeholder="Type something meaningful..." required></textarea>
+                        <div class="invalid-feedback">Please enter some text.</div>
+                    </div>
+                    <div class="d-grid">
+                        <button type="submit" class="btn btn-primary btn-lg">Analyze Sentiment</button>
+                    </div>
+                </form>
+                {% if result %}
+                <div class="alert {{ color_class }} mt-4 text-center">
+                    <strong>{{ result }}</strong>
+                </div>
+                {% endif %}
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-dark text-white text-center py-3">
+        <p class="mb-0">&copy; 2025 Sentiment Analysis Tool. All Rights Reserved.</p>
+    </footer>
+
+    <!-- Bootstrap Bundle JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+
+    <!-- Link Custom JavaScript -->
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+</body>
+</html>
