@@ -15,4 +15,4 @@ instance/
 .vscode/
 
 # Log files
-*.log
+*.log/
