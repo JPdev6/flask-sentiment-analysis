@@ -49,7 +49,6 @@ Analyze text sentiments (**positive**, **negative**, or **neutral**) with this l
 
 
 2. **Create and Activate a Virtual Environment**:
-
   - On macOS/Linux:
   ```bash
     python3 -m venv venv
@@ -60,8 +59,8 @@ Analyze text sentiments (**positive**, **negative**, or **neutral**) with this l
     python -m venv venv
     venv\Scripts\activate
   ```
+
  3. **Install Dependencies**:
-    
   - Run the following command to install required libraries:
  ```bash
     pip install -r requirements.txt
@@ -70,15 +69,15 @@ Analyze text sentiments (**positive**, **negative**, or **neutral**) with this l
  ```bash
     python app.py
   ```
+
 4. **Run the Application Locally**:
- - Start the Flask application:
-```bash
-python app.py
-```
+   - Start the Flask application:
+  ```bash
+    python app.py
+  ```
+
 5. **Open the App in Your Browser**:
    - Navigate to: [http://127.0.0.1:8000](http://127.0.0.1:8000)
-
----
 
 ## 🤝 Contributing
 Contributions are welcome! Here's how you can help:
