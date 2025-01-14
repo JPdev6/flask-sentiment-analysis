@@ -1,4 +1,5 @@
 from flask import Flask, render_template, request
+import os
 from textblob import TextBlob
 
 app = Flask(__name__)
@@ -34,6 +35,6 @@ def analyze():
 
     return render_template('index.html', result=result, color_class=color_class, text=text)
 
-if __name__ == '__main__':
-    app.run(host="0.0.0.0", port=8000)
-    app.run(debug=True)
+if __name__ == "__main__":
+    port = int(os.environ.get("PORT", 5000))  # Use dynamic PORT on Render
+    app.run(host="0.0.0.0", port=port)
