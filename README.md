@@ -7,9 +7,9 @@ Analyze text sentiments (positive, negative, or neutral) with this lightweight F
 🛠️ Built with Flask, TextBlob, and Bootstrap.
 
 ## 🎨 Dynamic Visual Feedback:
-Positive Sentiment: ✅ Displayed in green.
-Neutral Sentiment: 🔘 Displayed in gray.
-Negative Sentiment: ❌ Displayed in red.
+- Positive Sentiment: ✅ Displayed in green.
+- Neutral Sentiment: 🔘 Displayed in gray.
+- Negative Sentiment: ❌ Displayed in red.
 
 ## 🛠️ Technologies Used
 Python	Backend logic and Flask framework
