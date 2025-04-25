@@ -1,101 +1,124 @@
-# 🌟 Flask Sentiment Analysis with TextBlob
+# 🤖 Chatbot - Flask-Based Conversational AI
 
-Analyze text sentiments (**positive**, **negative**, or **neutral**) with this lightweight Flask application powered by **TextBlob** for Natural Language Processing (**NLP**).
-
----
-
-## 🌟 Features
-- ✅ **Real-Time Sentiment Analysis**: Analyze text and classify sentiments instantly.
-- 🌐 **Responsive Web Interface**: Clean, modern, and mobile-friendly design.
-- 🎨 **Dynamic Visual Feedback**:
-  - **Positive Sentiment**: ✅ Displayed in **green**.
-  - **Neutral Sentiment**: 🔘 Displayed in **gray**.
-  - **Negative Sentiment**: ❌ Displayed in **red**.
-- 🛠️ Built with **Flask**, **TextBlob**, and **Bootstrap**.
+A ChatGPT-like chatbot built with **Flask**, supporting room-specific conversations, persistent chat history, sentiment analysis, and FAQ analytics.  
+Easily deployable with **Docker** and backed by **MongoDB** for robust data persistence.
 
 ---
 
-## 🛠️ Technologies Used
-| Technology      | Purpose                                   |
-|------------------|-------------------------------------------|
-| **Python**       | Backend logic and Flask framework         |
-| **TextBlob**     | Sentiment analysis and NLP functionality  |
-| **HTML & CSS**   | Frontend structure and styling            |
-| **Bootstrap**    | Responsive and modern web design          |
-| **Render**       | Hosting platform for deployment           |
+## ✨ Features
+
+- 🗣️ Room-specific conversations
+- 🧠 Persistent chat history with MongoDB
+- 😃 Sentiment analysis using TextBlob
+- 📊 Analytics dashboard for frequent questions
+- 🐳 Dockerized deployment
+- 🌐 REST API endpoints for chatbot interaction
 
 ---
 
-## 🌐 Live Demo
-🎉 Try the live application here: **[Live App on Render](https://flask-sentiment-analysis-with-textblob.onrender.com)**
+## 📂 Project Structure
+
+```
+chatbot/
+├── app/
+│   ├── __init__.py
+│   ├── models/
+│   ├── routes/
+│   ├── templates/
+│   ├── static/
+│   └── utils.py
+├── docker-compose.yml
+├── Dockerfile
+├── requirements.txt
+├── .env.example
+├── .gitattributes
+└── README.md
+```
 
 ---
 
 ## 🚀 Getting Started
 
 ### Prerequisites
-- 🐍 **Python 3.9+** installed on your system.
-- 📦 Dependencies listed in `requirements.txt`.
+
+- Python 3.8+
+- Docker (optional, for container deployment)
+- MongoDB (local or cloud via MongoDB Atlas)
+
+### Installation (Local)
+
+```
+git clone https://github.com/JPdev6/chatbot.git
+cd chatbot
+python3 -m venv venv
+source venv/bin/activate   # Windows: venv\Scripts\activate
+pip install -r requirements.txt
+flask run
+```
+
+Open your browser at:
+
+```
+http://localhost:5000/
+```
 
 ---
 
-### Installation Steps
+## 🐳 Run with Docker
 
-1. **Clone the Repository**:
-   ```bash
-   git clone https://github.com/your-username/flask-sentiment-analysis.git
-   cd flask-sentiment-analysis
-   ```
+To build and run using Docker:
 
+```
+docker-compose up --build
+```
 
-2. **Create and Activate a Virtual Environment**:
-  - On macOS/Linux:
-  ```bash
-    python3 -m venv venv
-    source venv/bin/activate
-  ```
-  - On Windows:
-  ```bash
-    python -m venv venv
-    venv\Scripts\activate
-  ```
+This starts:
+- Flask backend
+- MongoDB database
 
- 3. **Install Dependencies**:
-  - Run the following command to install required libraries:
- ```bash
-    pip install -r requirements.txt
- ```
-  - Run the Application Locally:
- ```bash
-    python app.py
-  ```
+---
 
-4. **Run the Application Locally**:
-   - Start the Flask application:
-  ```bash
-    python app.py
-  ```
+## 📄 Environment Variables
 
-5. **Open the App in Your Browser**:
-   - Navigate to: [http://127.0.0.1:8000](http://127.0.0.1:8000)
+Create a `.env` file (or copy from `.env.example`) with:
+
+```
+FLASK_APP=app
+FLASK_ENV=development
+MONGO_URI=mongodb://localhost:27017/chatbot
+SECRET_KEY=your-secret-key-here
+```
+
+---
+
+## 📊 Analytics
+
+- View frequently asked questions
+- Analyze sentiment trends
+- Monitor chat activity per room
+
+Accessible via a secure admin dashboard.
+
+---
+
+## 📊 Technologies Used
+
+- Flask
+- MongoDB
+- Docker
+- Jinja2
+- TextBlob
+- Bootstrap
+
+---
 
 ## 🤝 Contributing
-Contributions are welcome! Here's how you can help:
-1. Fork the repository.
-2. Create a new branch (`git checkout -b feature-name`).
-3. Commit your changes (`git commit -m "Added feature"`).
-4. Push to the branch (`git push origin feature-name`).
-5. Submit a **Pull Request**.
+
+Contributions are welcome!  
+Fork the repository, improve it, and submit a pull request.
 
 ---
 
-## 📧 Contact
+## 📄 License
 
-Feel free to reach out if you have any questions or suggestions:
-
-- 📩 Email: **[johnnycontactmail@gmail.com](mailto:johnnycontactmail@gmail.com)**
-
----
-
-## 📜 License
-This project is licensed under the **MIT License**. See the [LICENSE](LICENSE) file for details.
+This project is licensed under the **MIT License**.
